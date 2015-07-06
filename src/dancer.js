@@ -31,3 +31,4 @@ var makeDancer = function(top, left, timeBetweenSteps){
 
   return dancer;
 };
+//test
