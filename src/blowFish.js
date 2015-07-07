@@ -11,16 +11,16 @@ makeBlowFish.prototype.constructor = makeBlowFish;
 makeBlowFish.prototype.step = function(){
   makeDancer.prototype.step.call(this);
 
-  setTimeout(this.step.bind(this), 1500);
+  setTimeout(this.step.bind(this), 2000);
 
   $('.blowFish').animate({
     'width': '+=40px',
     'height': '+=40px'
-  }, 2000);
+  }, 1000);
 
     $('.blowFish').animate({
     'width': '-=40px',
     'height': '-=40px'
-  }, 2000);
+  }, 1000);
 
 };
