@@ -31,7 +31,6 @@ body, a:link, a:visited, a:active{
   transform: rotate(120deg);
   position:absolute;
 }
-
 .blowFish {
   width: 100px;
   height: 100px;
@@ -39,4 +38,12 @@ body, a:link, a:visited, a:active{
 .shark {
   width:100px;
   height:100px;
+}
+.bubbles {
+  display:block;
+  width:25px;
+  height:25px;
+  background-color: #9FF;
+  border-radius: 50%;
+  position:absolute;
 }

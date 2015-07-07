@@ -1,0 +1,22 @@
+// click handler for each dance move when the link is clicked
+
+
+1: Line Up
+
+// click handler for lineup
+// when the button is clicked,
+// loop through window.dancers array
+// call lineUp on each "dancer"
+
+// add a lineup button to the index.html
+// create a lineup method for each object
+// create clickhandler in the init.js file
+
+
+// 2: Interact with each other
+// have shark eat fish
+
+// 3: Mouseover
+// have a method that on mouseover, fish changes color?
+
+// 4: Create testing spec
