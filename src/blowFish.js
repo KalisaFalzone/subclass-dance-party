@@ -1,7 +1,7 @@
 var makeBlowFish = function(top, left, timeBetweenSteps){
   makeDancer.apply(this, arguments);
 
-  this.$node = $('<span><img class="blowFish" src="images/blowFish.png"/></span>');
+  this.$node = $('<span class="dancer"><img class="blowFish" src="images/blowFish.png"/></span>');
 
 };
 
@@ -23,15 +23,4 @@ makeBlowFish.prototype.step = function(){
     'height': '-=40px'
   }, 2000);
 
-
-  // $('.blowFish').toggle(function() {
-  //     $('.blowFish').animate({
-  //           width: "+=20px",
-  //           height: "+=20px"
-  //         }, 1500 );
-  //       $('.blowFish').animate({
-  //           width: "-=20px",
-  //           height:"-=20px"
-  //         }, 1500);
-  // });
 };
