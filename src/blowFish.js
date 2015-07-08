@@ -1,15 +1,15 @@
-var makeBlowFish = function(top, left, timeBetweenSteps){
-  makeDancer.apply(this, arguments);
+var BlowFish = function(top, left, timeBetweenSteps){
+  Dancer.apply(this, arguments);
 
   this.$node = $('<span class="dancer"><img class="blowFish" src="images/blowFish.png"/></span>');
 
 };
 
-makeBlowFish.prototype = Object.create(makeDancer.prototype);
-makeBlowFish.prototype.constructor = makeBlowFish;
+BlowFish.prototype = Object.create(Dancer.prototype);
+BlowFish.prototype.constructor = BlowFish;
 
-makeBlowFish.prototype.step = function(){
-  makeDancer.prototype.step.call(this);
+BlowFish.prototype.step = function(){
+  Dancer.prototype.step.call(this);
 
   setTimeout(this.step.bind(this), 2000);
 

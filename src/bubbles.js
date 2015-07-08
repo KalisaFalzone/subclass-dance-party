@@ -1,5 +1,5 @@
-var makeBubbles = function(top, left, timeBetweenSteps){
-  makeDancer.apply(this, arguments);
+var Bubbles = function(top, left, timeBetweenSteps){
+  Dancer.apply(this, arguments);
 
   this.$node = $('<span class="dancer bubbles"></span>');
 
@@ -8,14 +8,14 @@ var makeBubbles = function(top, left, timeBetweenSteps){
 
 };
 
-makeBubbles.prototype = Object.create(makeDancer.prototype);
-makeBubbles.prototype.constructor = makeBubbles;
+Bubbles.prototype = Object.create(Dancer.prototype);
+Bubbles.prototype.constructor = Bubbles;
 
 
-makeBubbles.prototype.step = function(){
+Bubbles.prototype.step = function(){
 
 //   // call the old version of step at the beginning of any call to this new version of step
-  makeDancer.prototype.step.call(this);
+  Dancer.prototype.step.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.

@@ -1,15 +1,15 @@
-var makeShark = function(top, left, timeBetweenSteps){
-  makeDancer.apply(this, arguments);
+var Shark = function(top, left, timeBetweenSteps){
+  Dancer.apply(this, arguments);
 
   this.$node = $('<span class="dancer"><img class="shark" src="images/shark.png"/></span>');
 
 };
 
-makeShark.prototype = Object.create(makeDancer.prototype);
-makeShark.prototype.constructor = makeShark;
+Shark.prototype = Object.create(Dancer.prototype);
+Shark.prototype.constructor = Shark;
 
-makeShark.prototype.step = function(){
-  makeDancer.prototype.step.call(this);
+Shark.prototype.step = function(){
+  Dancer.prototype.step.call(this);
 
   setTimeout(this.step.bind(this), 1000);
 

@@ -1,15 +1,15 @@
-var makeRotatingDancer = function(top, left, timeBetweenSteps){
+var RotatingDancer = function(top, left, timeBetweenSteps){
 
-  makeDancer.apply(this, arguments);
+  Dancer.apply(this, arguments);
   this.$node = $('<span class="rotate"></span>');
 
 
 };
 
-makeRotatingDancer.prototype = Object.create(makeDancer.prototype);
-makeRotatingDancer.prototype.constructor = makeRotatingDancer;
+RotatingDancer.prototype = Object.create(Dancer.prototype);
+RotatingDancer.prototype.constructor = RotatingDancer;
 
-makeRotatingDancer.prototype.step = function(){
+RotatingDancer.prototype.step = function(){
 
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 
