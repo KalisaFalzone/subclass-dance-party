@@ -1,6 +1,6 @@
 var BlowFish = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-
+  this._timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"><img class="blowFish" src="images/blowFish.png"/></span>');
 
 };

@@ -6,7 +6,7 @@ describe("blowFish", function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    blowFishie = makeBlinkyDancer(10, 20, timeBetweenSteps);
+    blowFishie = new blowFish(10, 20, timeBetweenSteps);
   });
 
   it("should have a jQuery $node object", function(){

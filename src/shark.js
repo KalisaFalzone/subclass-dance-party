@@ -1,6 +1,6 @@
 var Shark = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-
+  this._timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"><img class="shark" src="images/shark.png"/></span>');
 
 };
@@ -11,7 +11,7 @@ Shark.prototype.constructor = Shark;
 Shark.prototype.step = function(){
   Dancer.prototype.step.call(this);
 
-  setTimeout(this.step.bind(this), 1000);
+  setTimeout(this.step.bind(this), this._timeBetweenSteps);
 
   var counter = 0;
 

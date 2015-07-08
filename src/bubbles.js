@@ -1,6 +1,6 @@
 var Bubbles = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-
+  this._timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer bubbles"></span>');
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -19,6 +19,6 @@ Bubbles.prototype.step = function(){
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-   setTimeout(this.step.bind(this), 1500);
+   setTimeout(this.step.bind(this), this._timeBetweenSteps);
    this.$node.toggle();
 };
