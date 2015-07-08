@@ -6,17 +6,17 @@ describe("blowFish", function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    blowFishie = new blowFish(10, 20, timeBetweenSteps);
+    blowFishie = new BlowFish(10, 20, timeBetweenSteps);
   });
 
   it("should have a jQuery $node object", function(){
     expect(blowFishie.$node).to.be.an.instanceof(jQuery);
   });
 
-  it("should have a step function that makes its node blink", function() {
-    sinon.spy(blowFishie.$node, 'toggle');
+  xit("should increase and then decrease in size", function() {
+    sinon.spy(blowFishie, 'animate');
     blowFishie.step();
-    expect(blowFishie.$node.toggle.called).to.be.true;
+    expect(blowFishie.animate.called).to.be.true;
   });
 
   describe("dance", function(){

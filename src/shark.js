@@ -11,8 +11,6 @@ Shark.prototype = Object.create(Dancer.prototype);
 Shark.prototype.constructor = Shark;
 
 Shark.prototype.step = function(){
-  // Dancer.prototype.step.call(this);
-
   setTimeout(this.step.bind(this), this._timeBetweenSteps);
 
   var counter = 0;
@@ -21,5 +19,4 @@ Shark.prototype.step = function(){
       this.$node.css('left', '+=10px');
       counter++;
   }
-
 };

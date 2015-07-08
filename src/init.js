@@ -30,8 +30,16 @@ $(document).ready(function(){
     //dancer.setPosition(dancer.top, dancer.left);
     //dancer.step();
     window.dancers.push(dancer);
-    $('body').append(dancer.$node);
-  });
+      $('body').append(dancer.$node);
+    });
 
+    $("body").on("mouseover", '.bubbles',function(event){
+      var color = '#'+Math.floor(Math.random()*16777215).toString(16);
+      $(this).css('background-color', color);
+    });
+
+    $('.lineup').on("click",function(event){
+      $('.dancer').css('left', '0');
+    });
 });
 
