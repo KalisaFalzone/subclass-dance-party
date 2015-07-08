@@ -4,7 +4,8 @@ var RotatingDancer = function(top, left, timeBetweenSteps){
   this._timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="rotate"></span>');
 
-
+  this.step();
+  this.setPosition(top, left);
 };
 
 RotatingDancer.prototype = Object.create(Dancer.prototype);

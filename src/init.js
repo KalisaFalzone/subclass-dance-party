@@ -27,14 +27,10 @@ $(document).ready(function(){
       Math.random() * 1000
     );
 
-    dancer.setPosition(dancer.top, dancer.left);
-    dancer.step();
+    //dancer.setPosition(dancer.top, dancer.left);
+    //dancer.step();
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
-  });
-
-  $(".bubbles").on("mouseover", function(event){
-    $(this).css('background-color', 'red');
   });
 
 });
